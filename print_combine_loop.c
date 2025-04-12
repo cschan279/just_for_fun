@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#define SLEEP_DELAY 20000
+#define SLEEP_DELAY 10000
 
 int get_window_width(){
 	struct winsize size;
@@ -51,7 +51,7 @@ void printloop_2(char* original, int target_pos){
 	if (target_pos >= orig_len || target_pos >= len) return;
 	
 	for (int i = len; i >= target_pos; i--){
-		char* array=get_filled_row('-',len);
+		char* array=get_filled_row(' ',len);
 		int copy_len = target_pos < orig_len ? target_pos : orig_len;
 		if (copy_len > len - 1) copy_len = len - 1;
 		memcpy(array, original, copy_len);
