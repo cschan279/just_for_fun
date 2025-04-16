@@ -1,6 +1,76 @@
-# Ignore all
-*
-# Unignore all with extensions
-!*.*
-# Unignore all dirs
-!*/
+# This is a sample .gitignore file for a .NET Core / Avalonia project.
+
+
+# .NET Core / Avalonia build and dependency artifacts
+bin/
+obj/
+*.csproj.user
+*.user
+*.suo
+*.cache
+*.dll
+*.pdb
+*.exe
+*.nupkg
+*.snupkg
+*.tmp
+*.bak
+*.log
+*.tlog
+*.metagen
+*.msbuild.binlog
+
+# NuGet packages
+packages/
+*.nupkg
+*.snupkg
+nuget.config
+
+# Visual Studio Code settings and workspace
+.vscode/
+*.code-workspace
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# User-specific files
+*.rsuser
+*.sln.docstates
+*.userprefs
+
+# Temporary and backup files
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Avalonia-specific generated files
+# (Optional: Uncomment if you have specific generated assets)
+# /Assets/Generated/
+
+# Dependency directories (managed by NuGet)
+lib/
+refs/
+
+# Runtime data and logs
+*.log
+logs/
+*.pidb
+*.db
+*.sqlite
+
+# macOS-specific files
+*.DS_Store
+
+# Windows-specific files
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux-specific files
+*.directory
+
+# Test results
+TestResults/
+*.trx
+*.xml
