@@ -1,0 +1,1 @@
+gcc -o pi_cal_saha_gmp pi_cal_saha_gmp.c -lgmp
