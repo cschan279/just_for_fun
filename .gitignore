@@ -1,4 +1,13 @@
+.vscode/
 
+*.rs.bak
+.cargo-watch/
 
 *.exe
 *.pdb
+
+# Added by cargo
+
+/target
+
+
