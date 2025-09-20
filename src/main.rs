@@ -1,4 +1,5 @@
 use std::io;
+use std::cmp::Ordering;
 
 use rand::Rng;
 use rand::rng;
@@ -30,15 +31,19 @@ fn main() {
             continue;
         }
 
-        if guess_value < secret_number {
-            println!("Too small!");
-            secret_range_min = guess_value + 1;
-        } else if guess_value > secret_number {
-            println!("Too big!");
-            secret_range_max = guess_value - 1;
-        } else {
-            println!("You win!");
-            break;
+        match guess_value.cmp(&secret_number) {
+            Ordering::Less => {
+                println!("Too small!");
+                secret_range_min = guess_value + 1;
+            }
+            Ordering::Greater => {
+                println!("Too big!");
+                secret_range_max = guess_value - 1;
+            }
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
         }
     }
     
